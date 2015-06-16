@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1= title
+    form#formAddUser(name="translate",method="post",action="/translate")
+        input#inputUserName(type="text", placeholder="Enter text", name="inputsentence")
+        &nbsp;
+        button#btnSubmit(type="submit") Translate
+    p #{translation}
